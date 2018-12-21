@@ -11,6 +11,6 @@ import static stonetree.com.meals.constants.Query.MEAL_ID;
 @Retention(RetentionPolicy.SOURCE)
 public @interface Query {
 
-    String MEAL_ID = Constants.QUERY_SELECTOR + "meal_id";
+    String MEAL_ID = "mealId";
 
 }

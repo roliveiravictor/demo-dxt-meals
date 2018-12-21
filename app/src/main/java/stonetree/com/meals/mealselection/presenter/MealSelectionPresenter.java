@@ -11,15 +11,15 @@ import stonetree.com.meals.mealselection.model.MealSelectionModel;
 import stonetree.com.meals.mealselection.model.MealSelectionResponse;
 import stonetree.com.meals.mealselection.provider.IMealSelectionProvider;
 import stonetree.com.meals.mealselection.provider.MealSelectionProvider;
-import stonetree.com.meals.mealselection.view.IMealSelection;
+import stonetree.com.meals.mealselection.view.IMealSelectionView;
 
 public class MealSelectionPresenter implements IMealSelectionPresenter {
 
     private MealSelectionModel model = new MealSelectionModel();
 
-    private IMealSelection view;
+    private IMealSelectionView view;
 
-    public MealSelectionPresenter(IMealSelection view) {
+    public MealSelectionPresenter(IMealSelectionView view) {
         this.view = view;
     }
 

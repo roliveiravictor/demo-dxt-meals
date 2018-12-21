@@ -3,23 +3,18 @@ package stonetree.com.meals.mealselection.view;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.widget.Button;
 
 import stonetree.com.meals.R;
-import stonetree.com.meals.constants.Constants;
 import stonetree.com.meals.core.view.CoreActivity;
+import stonetree.com.meals.ingredients.view.IngredientsActivity;
 import stonetree.com.meals.mealselection.model.MealSelectionResponse;
 import stonetree.com.meals.mealselection.presenter.MealSelectionPresenter;
 import stonetree.com.meals.mealselection.view.adapter.MealSelectionAdapter;
 import stonetree.com.meals.utils.IntentStarterUtils;
 
-public class MealSelectionActivity extends CoreActivity implements IMealSelection {
+public class MealSelectionActivity extends CoreActivity implements IMealSelectionView {
 
     private RecyclerView mealsRecycler;
-
-    private Button customize;
-    private Button checkout;
 
     private MealSelectionPresenter presenter;
 
@@ -27,7 +22,7 @@ public class MealSelectionActivity extends CoreActivity implements IMealSelectio
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_meal_selection);
 
         presenter = new MealSelectionPresenter(this);
 
@@ -49,8 +44,6 @@ public class MealSelectionActivity extends CoreActivity implements IMealSelectio
     public void findComponents() {
         super.findComponents();
         mealsRecycler = findViewById(R.id.meals);
-        customize = findViewById(R.id.customize);
-        checkout = findViewById(R.id.checkout);
     }
 
 
@@ -65,26 +58,12 @@ public class MealSelectionActivity extends CoreActivity implements IMealSelectio
     }
 
     private void setListeners() {
-        customize.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-            }
-        });
-
-        checkout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
     }
 
-    public void proceedToQuotasSelection(MealSelectionResponse response) {
-        final Bundle bundle = new Bundle();
-        bundle.putSerializable(Constants.MEALS_SELECTION_RESPONSE, response);
-
-        IntentStarterUtils.goFromWithExtraBundleTo(this, MealSelectionActivity.class, bundle);
+    @Override
+    public void proceedToIngredientsSelection() {
+        IntentStarterUtils.goFromTo(this, IngredientsActivity.class);
     }
 
     @Override
