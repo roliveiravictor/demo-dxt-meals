@@ -10,7 +10,7 @@ public interface IIngredientsPresenter {
 
     void onResume();
 
-    void getIngredients();
+    void getMealIngredients();
 
     void getIngredientImage(Ingredient ingredient, ImageDownloaderCallback callback);
 

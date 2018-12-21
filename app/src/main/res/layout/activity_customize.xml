@@ -46,16 +46,6 @@
                     android:textSize="18sp" />
 
                 <Button
-                    android:id="@+id/customize"
-                    android:layout_width="match_parent"
-                    android:layout_height="65dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="@dimen/margin_10dp"
-                    android:gravity="center"
-                    android:padding="@dimen/margin_10dp"
-                    android:text="@string/meal_selection_customize" />
-
-                <Button
                     android:id="@+id/checkout"
                     android:layout_width="match_parent"
                     android:layout_height="65dp"

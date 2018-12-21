@@ -20,6 +20,9 @@ public interface ICoreProvider {
     @GET()
     Call<ResponseBody> getMealImage(@Url String url);
 
-    @GET(Endpoint.INGREDIENTS)
-    Call<List<Ingredient>> getIngredients(@Path(Query.MEAL_ID) String mealId);
+    @GET(Endpoint.MEAL_INGREDIENTS)
+    Call<List<Ingredient>> getMealIngredients(@Path(Query.MEAL_ID) String mealId);
+
+    @GET(Endpoint.ALL_INGREDIENTS)
+    Call<List<Ingredient>> getAllIngredients();
 }

@@ -11,13 +11,13 @@ public class IngredientsResponse implements Serializable {
 
     @Expose
     @SerializedName("ingredients")
-    private List<Ingredient> ingredients = new ArrayList<>();
+    private List<Ingredient> mealIngredients = new ArrayList<>();
 
-    public List<Ingredient> getIngredients() {
-        return ingredients;
+    public List<Ingredient> getMealIngredients() {
+        return mealIngredients;
     }
 
-    public void setIngredients(List<Ingredient> ingredients) {
-        this.ingredients = ingredients;
+    public void setMealIngredients(List<Ingredient> mealIngredients) {
+        this.mealIngredients = mealIngredients;
     }
 }

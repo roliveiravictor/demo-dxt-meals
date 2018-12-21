@@ -5,14 +5,14 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import stonetree.com.meals.R;
-import stonetree.com.meals.core.view.CoreActivity;
-import stonetree.com.meals.ingredients.view.IngredientsActivity;
+import stonetree.com.meals.core.view.CoreView;
+import stonetree.com.meals.ingredients.view.IngredientsView;
 import stonetree.com.meals.mealselection.model.MealSelectionResponse;
 import stonetree.com.meals.mealselection.presenter.MealSelectionPresenter;
 import stonetree.com.meals.mealselection.view.adapter.MealSelectionAdapter;
 import stonetree.com.meals.utils.IntentStarterUtils;
 
-public class MealSelectionActivity extends CoreActivity implements IMealSelectionView {
+public class MealSelectionView extends CoreView implements IMealSelectionView {
 
     private RecyclerView mealsRecycler;
 
@@ -63,7 +63,7 @@ public class MealSelectionActivity extends CoreActivity implements IMealSelectio
 
     @Override
     public void proceedToIngredientsSelection() {
-        IntentStarterUtils.goFromTo(this, IngredientsActivity.class);
+        IntentStarterUtils.goFromTo(this, IngredientsView.class);
     }
 
     @Override

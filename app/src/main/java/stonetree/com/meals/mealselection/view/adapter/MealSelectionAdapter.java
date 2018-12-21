@@ -18,7 +18,7 @@ import stonetree.com.meals.mealselection.model.Meal;
 import stonetree.com.meals.mealselection.model.MealSelectionResponse;
 import stonetree.com.meals.mealselection.presenter.MealSelectionPresenter;
 import stonetree.com.meals.mealselection.view.IMealSelectionView;
-import stonetree.com.meals.session.Session;
+import stonetree.com.meals.core.model.Session;
 import stonetree.com.meals.utils.Collections;
 
 public class MealSelectionAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {

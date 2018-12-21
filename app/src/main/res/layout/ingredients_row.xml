@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/rowLayout"
     android:layout_width="match_parent"
     android:layout_height="150dp"
+    android:background="@color/meal_ice_white"
     android:layout_margin="@dimen/margin_10dp">
 
     <LinearLayout
@@ -24,9 +25,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:textColor="@color/ml_warm_grey_two"
+            android:textColor="@color/meal_warm_grey_two"
             android:textSize="16sp" />
 
     </LinearLayout>
 
-</android.support.v7.widget.CardView>
+</LinearLayout>

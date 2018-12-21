@@ -4,7 +4,7 @@ import android.content.Context;
 
 import stonetree.com.meals.core.model.Error;
 
-public interface ICoreActivity {
+public interface ICoreView {
 
     void hideLoading();
     void showLoading();

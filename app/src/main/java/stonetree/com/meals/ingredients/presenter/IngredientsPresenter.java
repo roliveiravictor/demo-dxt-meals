@@ -24,13 +24,13 @@ public class IngredientsPresenter implements IIngredientsPresenter {
     }
 
     @Override
-    public void getIngredients() {
+    public void getMealIngredients() {
         view.showLoading();
         new IngredientsProvider(new IIngredientsProvider() {
             @Override
             public void onSuccess(IngredientsResponse response) {
                 model.setIngredientsResponse(response);
-                view.showIngredients(response);
+                view.showMealIngredients(response);
             }
 
             @Override

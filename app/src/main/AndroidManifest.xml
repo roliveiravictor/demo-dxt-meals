@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".mealselection.view.MealSelectionActivity">
+        <activity android:name=".mealselection.view.MealSelectionView">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,7 +22,17 @@
         </activity>
 
         <activity
-            android:name=".ingredients.view.IngredientsActivity"
+            android:name=".ingredients.view.IngredientsView"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".customize.view.CustomizeView"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".checkout.view.CheckoutView"
             android:configChanges="orientation"
             android:screenOrientation="portrait" />
 

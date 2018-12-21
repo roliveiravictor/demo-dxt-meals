@@ -27,7 +27,13 @@ public class Meal implements Serializable {
     @SerializedName("image")
     private String imageUrl;
 
+    @Expose
+    @SerializedName("bitmap")
     private Bitmap bitmap;
+
+    @Expose
+    @SerializedName("custom")
+    private List<Integer> customIngredients = new ArrayList<>();
 
     public String getId() {
         return id;
@@ -67,5 +73,13 @@ public class Meal implements Serializable {
 
     public void setBitmap(Bitmap bitmap) {
         this.bitmap = bitmap;
+    }
+
+    public List<Integer> getCustomIngredients() {
+        return customIngredients;
+    }
+
+    public void setCustomIngredients(List<Integer> customIngredients) {
+        this.customIngredients = customIngredients;
     }
 }

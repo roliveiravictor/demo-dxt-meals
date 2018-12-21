@@ -1,12 +1,8 @@
-package stonetree.com.meals.session;
-
-import stonetree.com.meals.core.model.Cart;
+package stonetree.com.meals.core.model;
 
 public class Session {
 
     private static Session session;
-
-    private boolean networkOnline;
 
     private Cart cart = new Cart();
 
@@ -25,15 +21,8 @@ public class Session {
         this.cart = cart;
     }
 
-    public void setNetworkOnline(boolean networkOnline) {
-        this.networkOnline = networkOnline;
-    }
-
-    public boolean isNetworkOnline() {
-        return networkOnline;
-    }
-
     public void purge() {
-        this.cart = null;
+        this.cart.getMeal().getCustomIngredients().clear();
+        this.cart.setPrice(0);
     }
 }

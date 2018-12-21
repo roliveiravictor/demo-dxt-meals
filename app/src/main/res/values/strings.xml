@@ -3,4 +3,6 @@
     <string name="meal_selection_title">SELECT YOUR MEAL</string>
     <string name="meal_selection_customize">Customize</string>
     <string name="meal_selection_checkout">Checkout</string>
+    <string name="meal_customize_amount">x0</string>
+    <string name="checkout_total">TOTAL</string>
 </resources>

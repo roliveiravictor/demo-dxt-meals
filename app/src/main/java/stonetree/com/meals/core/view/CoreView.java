@@ -13,7 +13,7 @@ import stonetree.com.meals.R;
 import stonetree.com.meals.core.model.Error;
 import stonetree.com.meals.utils.ToastUtils;
 
-public class CoreActivity extends AppCompatActivity implements ICoreActivity {
+public class CoreView extends AppCompatActivity implements ICoreView {
 
     private SpinKitView spinKitView;
 

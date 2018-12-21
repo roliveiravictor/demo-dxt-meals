@@ -1,10 +1,10 @@
 package stonetree.com.meals.ingredients.view;
 
-import stonetree.com.meals.core.view.ICoreActivity;
+import stonetree.com.meals.core.view.ICoreView;
 import stonetree.com.meals.ingredients.model.IngredientsResponse;
 
-public interface IIngredientsView extends ICoreActivity {
+public interface IIngredientsView extends ICoreView {
 
-    void showIngredients(IngredientsResponse response);
+    void showMealIngredients(IngredientsResponse response);
 
 }

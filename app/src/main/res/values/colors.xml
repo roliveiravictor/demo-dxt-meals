@@ -3,5 +3,6 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="ml_warm_grey_two">#999999</color>
+    <color name="meal_warm_grey_two">#999999</color>
+    <color name="meal_ice_white">#F5F5F5</color>
 </resources>

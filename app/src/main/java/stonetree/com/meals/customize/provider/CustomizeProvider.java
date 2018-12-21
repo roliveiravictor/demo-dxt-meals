@@ -1,4 +1,4 @@
-package stonetree.com.meals.ingredients.provider;
+package stonetree.com.meals.customize.provider;
 
 import java.util.List;
 
@@ -8,37 +8,34 @@ import retrofit2.Response;
 import stonetree.com.meals.core.model.Error;
 import stonetree.com.meals.core.provider.CoreProvider;
 import stonetree.com.meals.core.provider.ICoreProvider;
+import stonetree.com.meals.customize.model.CustomizeResponse;
 import stonetree.com.meals.ingredients.model.Ingredient;
-import stonetree.com.meals.ingredients.model.IngredientsResponse;
-import stonetree.com.meals.core.model.Session;
 
-public class IngredientsProvider {
+public class CustomizeProvider {
 
-    private IIngredientsProvider callback;
+    private ICustomizeProvider callback;
 
-    public IngredientsProvider(IIngredientsProvider callback) {
+    public CustomizeProvider(ICustomizeProvider callback) {
         this.callback = callback;
     }
 
-    public void getMeals() {
+    public void getAllIngredients() {
         final ICoreProvider provider = CoreProvider.getRetrofit().create(ICoreProvider.class);
 
-        final String mealId = Session.getInstance().getCart().getMeal().getId();
-
-        final Call<List<Ingredient>> call = provider.getMealIngredients(mealId);
-        call.enqueue(getMealIngredientsCallback());
+        final Call<List<Ingredient>> call = provider.getAllIngredients();
+        call.enqueue(getAllIngredientsCallback());
     }
 
-    private Callback<List<Ingredient>> getMealIngredientsCallback() {
+    private Callback<List<Ingredient>> getAllIngredientsCallback() {
         return new Callback<List<Ingredient>>() {
             @Override
             public void onResponse(Call<List<Ingredient>> call, Response<List<Ingredient>> response) {
                 final List<Ingredient> bodyResponse = response.body();
-                final IngredientsResponse ingredientsResponse = new IngredientsResponse();
+                final CustomizeResponse customizeResponse = new CustomizeResponse();
 
-                ingredientsResponse.setMealIngredients(bodyResponse);
+                customizeResponse.setAllIngredients(bodyResponse);
 
-                callback.onSuccess(ingredientsResponse);
+                callback.onSuccess(customizeResponse);
             }
 
             @Override
