@@ -5,4 +5,6 @@
     <string name="meal_selection_checkout">Checkout</string>
     <string name="meal_customize_amount">x0</string>
     <string name="checkout_total">TOTAL</string>
+    <string name="ingredients_title">INGREDIENTS</string>
+    <string name="customize_title">CUSTOMIZE YOUR MEAL</string>
 </resources>
