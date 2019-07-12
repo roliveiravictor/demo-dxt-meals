@@ -32,10 +32,10 @@ Mac OS X 10.14.1
 
 ### Prints ###
 
-   ![dx1](https://bitbucket.org/roliveiravictor/demo-dextra/raw/master/prints/dx1.png)
+   ![dx1](/prints/dx1.png)
 
-   ![dx2](https://bitbucket.org/roliveiravictor/demo-dextra/raw/master/prints/dx2.png)
+   ![dx2](/prints/dx2.png)
 
-   ![dx3](https://bitbucket.org/roliveiravictor/demo-dextra/raw/master/prints/dx3.png)
+   ![dx3](/prints/dx3.png)
 
-   ![dx4](https://bitbucket.org/roliveiravictor/demo-dextra/raw/master/prints/dx4.png)
+   ![dx4](/prints/dx4.png)
